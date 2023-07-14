@@ -1,0 +1,29 @@
+{
+	"name": "ts-example",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "tsc && node ./dist/index.js",
+		"dev": "tsc-watch --onSuccess \"node dist/index.js\""
+	},
+	"keywords": [
+		"typescript",
+		"sern",
+		"discord.js"
+	],
+	"license": "UNLICENSED",
+	"dependencies": {
+		"@linear/sdk": "^6.0.0",
+		"@sern/handler": "alpha",
+		"dayjs": "^1.11.9",
+		"discord.js": "latest",
+		"dotenv": "^16.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.25",
+		"typescript": "5.0"
+	},
+	"type": "module"
+}
