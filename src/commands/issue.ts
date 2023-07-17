@@ -74,6 +74,7 @@ export default commandModule({
 				.setColor('Random')
 				.setAuthor({ name: issueCreator.displayName || issueCreator.email!, iconURL: issueCreator.avatarUrl, url: issueCreator.url })
 				.setTitle(issue.title)
+				.setURL(issue.url)
 				.setDescription(`${issue.description ? codeBlock(issue.description) : ''}\nInfo:\n- Status: ${statusEmojiResolver(issueState.type as IssueStateType)} ${issueState.name}\n- Priority: ${issuePriorityResolver(issuePriority).emoji} ${issuePriorityResolver(issuePriority).title}\n- Assignee: ${issueAssignee ? `[${issueAssignee.name}](${issueAssignee.url})` : 'none'}\n- Project: ${issueProject ? `[${issueProject.name}](${issueProject.url})` : 'none'}\n- On project milestone: ${issue.projectMilestone || 'none'}\n- Due date: ${issue.dueDate ? dayjs(issue.dueDate).format('MM/DD/YYYY HH:mm') : 'none'}`)
 
 			ctx.reply({ embeds: [embed] })
