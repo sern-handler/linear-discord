@@ -93,14 +93,14 @@
   resolved "https://registry.yarnpkg.com/@sapphire/snowflake/-/snowflake-3.5.1.tgz#254521c188b49e8b2d4cc048b475fb2b38737fec"
   integrity sha512-BxcYGzgEsdlG0dKAyOm0ehLGm2CafIrfQTZGWgkfKYbj+pNNsorZ7EotuZukc2MT70E0UbppVbtpBrqpzVzjNA==
 
-"@sern/handler@alpha":
-  version "3.0.0-rc10"
-  resolved "https://registry.yarnpkg.com/@sern/handler/-/handler-3.0.0-rc10.tgz#bcf476c39a3e43d6da1c1bbee1517fc98312542e"
-  integrity sha512-bBlQ5zRkyk0oZUCc9pnJec1i0+yh3/bFBalOdGI9bPV+03bYhxOS4N95jpANn0cVo44p82N/nqQHo8wdfN3luA==
+"@sern/handler@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@sern/handler/-/handler-3.1.0.tgz#222f84076b9eb78b136dd71ed7b476d273629b64"
+  integrity sha512-idan6m4h6hQEkqBrne92IPgVnUtOlxHRrn0GqYOfwXaWGmPKnQWbT/lVzx3ytDRXQWoTrubZnF12r5XGS30Znw==
   dependencies:
     iti "^0.6.0"
     rxjs "^7.8.0"
-    ts-results-es "^3.6.0"
+    ts-results-es "^4.0.0"
 
 "@tokenizer/token@^0.3.0":
   version "0.3.0"
@@ -146,7 +146,7 @@ discord-api-types@^0.37.41:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.37.48.tgz#347907bce8f3c00e746b2a7afcf98628d7065731"
   integrity sha512-vu2NQJD7SZRjpKDC2DPNsxTz34KS53OrotA+LGRW6mcyT55Hjqu66aRrouzjYhea7tllL9I7rvWVX7bg3aT2AQ==
 
-discord.js@latest:
+discord.js@^14.11.0:
   version "14.11.0"
   resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-14.11.0.tgz#6529d49f30d10fc5a9ff8e6796661aa998769afe"
   integrity sha512-CkueWYFQ28U38YPR8HgsBR/QT35oPpMbEsTNM30Fs8loBIhnA4s70AwQEoy6JvLcpWWJO7GY0y2BUzZmuBMepQ==
@@ -303,20 +303,20 @@ ts-mixer@^6.0.3:
   resolved "https://registry.yarnpkg.com/ts-mixer/-/ts-mixer-6.0.3.tgz#69bd50f406ff39daa369885b16c77a6194c7cae6"
   integrity sha512-k43M7uCG1AkTyxgnmI5MPwKoUvS/bRvLvUb7+Pgpdlmok8AoqmUaZxUUw8zKM5B1lqZrt41GjYgnvAi0fppqgQ==
 
-ts-results-es@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/ts-results-es/-/ts-results-es-3.6.0.tgz#351023246249ef558c2fe3700099e1535226ce47"
-  integrity sha512-swha7PpeUNX93LzwhNtlk97FZZdTkCsI4j2ShletEmQ4cEi9SWy95x8XRTpfOP8gr16ikEBSi4U8xD43BYHDFg==
+ts-results-es@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ts-results-es/-/ts-results-es-4.0.0.tgz#0116b1121c6c6e1b892009983048efb2be0744ff"
+  integrity sha512-v8vi0R4hu3Z5CugRPGA2qnIns4a4j+3/Bkh5Iak041AsBNOYA6DNjoijvHDli76Grt6KvihU6errHX03Fz9Jzw==
 
 tslib@^2.1.0, tslib@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.0.tgz#b295854684dbda164e181d259a22cd779dcd7bc3"
   integrity sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==
 
-typescript@5.0:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
-  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
+typescript@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.2.tgz#5ebb5e5a5b75f085f22bc3f8460fba308310fa78"
+  integrity sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==
 
 undici@^5.22.0:
   version "5.22.1"

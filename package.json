@@ -16,14 +16,14 @@
 	"license": "UNLICENSED",
 	"dependencies": {
 		"@linear/sdk": "^6.0.0",
-		"@sern/handler": "alpha",
+		"@sern/handler": "^3.1.0",
 		"dayjs": "^1.11.9",
-		"discord.js": "latest",
+		"discord.js": "^14.11.0",
 		"dotenv": "^16.3.1"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.25",
-		"typescript": "5.0"
+		"typescript": "^5.2.2"
 	},
 	"type": "module"
 }
