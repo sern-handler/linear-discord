@@ -60,6 +60,7 @@ export default commandModule({
 		}
 	],
 	execute: async (ctx, [, args]) => {
+		await ctx.interaction.deferReply()
 		try {
 			const issueid = args.getString('issue', true)
 
@@ -75,11 +76,12 @@ export default commandModule({
 				.setAuthor({ name: issueCreator.displayName || issueCreator.email!, iconURL: issueCreator.avatarUrl, url: issueCreator.url })
 				.setTitle(issue.title)
 				.setURL(issue.url)
-				.setDescription(`${issue.description ? codeBlock(issue.description) : ''}\nInfo:\n- Status: ${statusEmojiResolver(issueState.type as IssueStateType)} ${issueState.name}\n- Priority: ${issuePriorityResolver(issuePriority).emoji} ${issuePriorityResolver(issuePriority).title}\n- Assignee: ${issueAssignee ? `[${issueAssignee.name}](${issueAssignee.url})` : 'none'}\n- Project: ${issueProject ? `[${issueProject.name}](${issueProject.url})` : 'none'}\n- On project milestone: ${issue.projectMilestone || 'none'}\n- Due date: ${issue.dueDate ? dayjs(issue.dueDate).format('MM/DD/YYYY HH:mm') : 'none'}`)
+				.setDescription(`${issue.description ? codeBlock(issue.description) : ''}\nInfo:\n- Status: ${statusEmojiResolver(issueState.type as IssueStateType)} ${issueState.name}\n- Priority: ${issuePriorityResolver(issuePriority).emoji} ${issuePriorityResolver(issuePriority).title}\n- Assignee: ${issueAssignee ? `[${issueAssignee.name}](${issueAssignee.url})` : 'none'}\n- Project: ${issueProject ? `[${issueProject.name}](${issueProject.url})` : 'none'}\n- On project milestone: ${await issue.projectMilestone || 'none'}\n- Due date: ${issue.dueDate ? dayjs(issue.dueDate).format('MM/DD/YYYY HH:mm') : 'none'}`)
 
-			ctx.reply({ embeds: [embed] })
+			ctx.interaction.editReply({ embeds: [embed] })
 		} catch {
-			await ctx.reply({ content: `Something went wrong while trying to run the command. Try again.`, ephemeral: true })
+			await ctx.interaction.editReply({ content: `Something went wrong while trying to run the command, try again.` })
+			setTimeout(() => ctx.interaction.deleteReply(), 2000)
 		}
 	},
 });
